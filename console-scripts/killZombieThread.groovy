@@ -1,7 +1,7 @@
 //Kills a zombie build thread by finishing the executor
 def comp = Jenkins.instance.getComputer(computerName)
 //print all executors
-comp.getExecutors()..each{
+comp.getExecutors().each{
     println it
 }
 
