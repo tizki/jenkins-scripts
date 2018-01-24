@@ -1,7 +1,7 @@
 def jenkins = Jenkins.instance
 def jobName = "myJob"
 def bldNum = 123
-def job = jenkins.getItem(myJob)
+def job = jenkins.getItem(jobName)
 def bld = job.getBuildByNumber(bldNum)
 
 long hourIInMillis = 3600000
