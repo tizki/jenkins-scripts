@@ -8,7 +8,7 @@ long quarterHourIInMillis = 900000
 def labelName = "myLabel"
 def label = jenkins.getLabel(labelName)
 
-def getBuildsForLabelInTimeFrame(String label, long startTime, long endTime){
+def getBuildsForLabelInTimeFrame(def label, long startTime, long endTime){
   label.nodes.each{
     def node = it
     println "******* ${node.getDisplayName()} ********"
