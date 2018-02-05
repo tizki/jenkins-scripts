@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#It is recommanded to enable CSRF protection, for more info see https://github.com/tizki/jenkins-scripts/blob/master/rest-api/HowToEnableCSRFProtection.md
 jobName=$1
 jenkinsUrl=$2
 if [ -z jobName ]; then
