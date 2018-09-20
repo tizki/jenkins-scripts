@@ -16,5 +16,7 @@ filteredLabels.addAll(specificLabelsToFilter)
 def labelsToAssign =  lables - filteredLabels
 println "Assigins the following labels to the master node: ${labelsToAssign}"
 
-def masterNode = j.getNode("master")
-masterNode.setLabelString(labelsToAssign)
+//get the master node and assign all labels as one string
+def masterComputer = j.getComputers().find { it instanceof Jenkins.MasterComputer}
+def masterNode = masterComputer.getNode()
+masterNode.setLabelString(labelsToAssign.join(" "))
